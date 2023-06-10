@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cidade dos Filmes</title>
+    
   
     <style>
         /* Estilos do menu e dos filmes */
@@ -27,23 +28,42 @@
             justify-content: center;
             margin: 0 auto;
             max-width: 900px;
+            
         }
 
-        .filme {
-            width: 150px;
-            margin: 10px;
-            cursor: pointer;
+        .filme-container img {
+      border-radius: 20px; /* Ajuste o valor conforme necessário */
+     border: 1px outset white;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Adicione uma sombra de borda */
+}
+
+       .filme {
+        width: 150px;
+        margin: 10px;
+        cursor: pointer;
         }
 
         .filme img {
-            width: 100%;
-            height: auto;
+           
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+
+        opacity: 0.9;
+    }
+
+      
+        .filme img:hover {
+        opacity: 1;
         }
 
+
         body {
-            background-color: black;
-            color: white;
+            background: url(./imgs/background.jpg) 50% / cover;
+            background-repeat: no-repeat;
+    
         }
+
 
         #filme-overlay {
             display: none;
@@ -86,6 +106,14 @@
                 text-align: right;
                 margin-right: 10px;
             }
+
+            .mendu img{
+
+                width: 80%;
+                content: url(./imgs/pipoca.png);
+    
+            }
+          
         }
 
         /* Media query para telas maiores */
@@ -93,6 +121,11 @@
             .menu {
                 display: block;
             }
+
+            .mendu img{
+
+            width: 20%;
+}
         }
 
         .menu-responsive {
@@ -105,8 +138,8 @@
             font-size: 16px;
             border: none;
             border-radius: 4px;
-            background-color: #333;
-            color: white;
+            background-color: white;
+            color: black;
             appearance: none; /* Remove o estilo padrão do select */
         }
 
@@ -146,14 +179,16 @@
             font-size: 16px;
             border: none;
             border-radius: 4px;
-            background-color: #333;
-            color: white;
+            background-color: white;
+            color: black;
             cursor: pointer;
         }
 
         #search-btn:hover {
             background-color: #555;
         }
+
+
     </style>
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -161,12 +196,12 @@
 
 <body>
     <div class="mendu">
-        <img src="https://www.netmovies.com.br/assets/images/netmovies.webp" width="350" />
+        <img src="./imgs/pipoca.png" />
     </div>
 
     <div class="menu-responsive">
         <select id="categoria-select">
-            <option value="todos">Todos</option>
+            <option value="todos">Escolha Categorias</option>
             <option value="terror">Terror</option>
             <option value="suspense">Suspense</option>
             <option value="acao">Filmes de Ação</option>
@@ -183,8 +218,8 @@
 
     <div class="filme-container">
         <div class="filme terror">
-            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
-                <img src="https://filmesonlinevizer.com/content/movies/posterPt/342/24491.webp" data-caption="Um poderoso vírus está a solta. Transmitido em uma gota de sangue e com efeito devastador em alguns segundos, o vírus mantém os infectados em um estado permanente de descontrole assassino. Dentro de 28 dias, o país está tomado e um punhado de sobreviventes inicia esforços para garantir algum futuro à raça humana, mas o que não percebem é que o vírus mortal não é única coisa que os ameaça." />
+            <a href="https://streamtape.com/e/kWW9Z7G626uYeL/" target="_blank">
+                <img src="https://s2-gshow.glbimg.com/srEPJBTXJB3_KKThSe0zUSBdlz8=/0x0:1080x1351/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/Q/g/IPSDQ1SVKCAFBEjZsj0w/vin-diesel-poster.jpg" data-caption="Um poderoso vírus está a solta. Transmitido em uma gota de sangue e com efeito devastador em alguns segundos, o vírus mantém os infectados em um estado permanente de descontrole assassino. Dentro de 28 dias, o país está tomado e um punhado de sobreviventes inicia esforços para garantir algum futuro à raça humana, mas o que não percebem é que o vírus mortal não é única coisa que os ameaça." />
             </a>
         </div>
         <div class="filme suspense">
@@ -197,12 +232,27 @@
                 <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
             </a>
         </div>
+        <div class="filme suspense">
+            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
+                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
+            </a>
+        </div>
+        <div class="filme suspense">
+            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
+                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
+            </a>
+        </div>
+        <div class="filme suspense">
+            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
+                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
+            </a>
+        </div>
     </div>
 
     <div id="filme-overlay">
         <div id="filme-overlay-content">
             <h3 id="filme-caption"></h3>
-            <iframe id="filme-video" width="800" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+            <iframe id="filme-video" width="800" height="400" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
 
         </div>
     </div>
@@ -237,28 +287,28 @@
     });
 
     $('.filme-container').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: false,
-        nextArrow: false,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Voltar</button>',
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button">Frente</button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
     $('#categoria-select').on('change', function() {
         var categoria = $(this).val();

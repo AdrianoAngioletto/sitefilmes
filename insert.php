@@ -30,76 +30,12 @@
 
 <?php
 
-
-// function Calcula( $peso,  $altura) {
-
-
-//     return $peso / ($altura*$altura);
-
-// }
-
-// echo Calcula(75, 1.85);
-
-// $valor = 10;
-
-
-
-//  ($valor * $valor)  + 1 + ($valor * 5);
-
-
-// function numero($numero){
-  
- 
-// echo  $numero * $numero;
-
-// }
-
-// echo numero(55 + 35);
-
-
-// function ConverteKm($km){
-
-//     global $total;
-//     $total += $km;
-
-//     return $km * 0.6;
-
-
-// }
-
-// echo ConverteKm(100);
-// echo ConverteKm(100);
-// echo ConverteKm(100);
-
-
-
-// function AdicionaValor($valor){
-
-//     static $total;
-
-//     return $total += $valor;
-
-
-// }
-
-// echo AdicionaValor(100);
-// echo AdicionaValor(100);
-// echo AdicionaValor(100);
- 
+// esperando pra insert.
 
 
 
 if(isset($_POST['texto']) && isset($_POST['submit'])){
-   
-    $dadoEnviado = "dado enviado";
-    
-    echo '<script>';
 
-    echo 'let NomeInput = document.getElementById("name");';
-
-    echo 'NomeInput.placeholder = ' . json_encode($dadoEnviado) .';';
-
-    echo '</script>';
 
 $texto = $_POST['texto'];
 
@@ -127,14 +63,14 @@ $database->Mostra_Tudo();
 if($blindar->execute() === true){
 
 
-    echo '<script>alert("bagulho loco bagulho serio");</script>';
+    echo '<script>alert("dados inseridos com sucesso");</script>';
 
     $blindar = null;
 
 }else{
 
 
-    echo 'bagulho mais serious ainda';
+    echo 'não inseriu';
 }
 
 

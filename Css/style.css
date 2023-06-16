@@ -21,7 +21,7 @@
     }
 
     .filme-container img {
-  border-radius: 20px; /* Ajuste o valor conforme necessário */
+  border-radius: 20px; 
  border: 1px outset white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Adicione uma sombra de borda */
 }

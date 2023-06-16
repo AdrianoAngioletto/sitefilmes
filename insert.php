@@ -4,75 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Registro</title>
+<style>
+
+
+
+</style>
 </head>
 <body>
     
 
 
+
+<div class="menu">
+
 <form action="" method="post">
 
-<input type="text" name="texto" />
+<input class="item"  type="text" id="name" name="texto" />
 
-<input type="submit" name="submit" />
+<input class="item" type="submit" name="submit" />
+
 
 </form>
+</div>
 
 
 <?php
 
 
+// function Calcula( $peso,  $altura) {
 
-$valor = $_POST['texto'];
 
-require_once("./DB.class.php");
+//     return $peso / ($altura*$altura);
 
-require_once("./conecta.php");
+// }
 
-$database = new Database($host, $username, $password, $dbname, null);
+// echo Calcula(75, 1.85);
 
-$database->Conecta_Ai_Bb();
-
-$conexao = $database->Pega_Conexao();
-
-$sql = "INSERT INTO test (va) VALUES (:valor)";
-
-$prepara = $conexao->prepare($sql);
-
-$prepara->bindValue(':valor', $valor);
-
-$prepara->execute();
-
-$sql_2 = "SELECT cu FROM test";
-
-$prepara_2 = $conexao->prepare($sql_2);
-
-$prepara_2->execute();
-
-$resultado_2 = $prepara_2->fetchAll();
-
-foreach ($resultado_2 as $row) {
-    echo $row['va'] . "<br>";
-}
+// $valor = 10;
 
 
 
+//  ($valor * $valor)  + 1 + ($valor * 5);
 
-if($conexao == true){
 
-    echo " dados inseridos com sucesso";
+// function numero($numero){
+  
+ 
+// echo  $numero * $numero;
 
+// }
+
+// echo numero(55 + 35);
+
+
+// function ConverteKm($km){
+
+//     global $total;
+//     $total += $km;
+
+//     return $km * 0.6;
+
+
+// }
+
+// echo ConverteKm(100);
+// echo ConverteKm(100);
+// echo ConverteKm(100);
+
+
+
+// function AdicionaValor($valor){
+
+//     static $total;
+
+//     return $total += $valor;
+
+
+// }
+
+// echo AdicionaValor(100);
+// echo AdicionaValor(100);
+// echo AdicionaValor(100);
+ 
+
+
+
+if(isset($_POST['texto']) && isset($_POST['submit'])){
+   
+    $dadoEnviado = "dado enviado";
     
+    echo '<script>';
+
+    echo 'let NomeInput = document.getElementById("name");';
+
+    echo 'NomeInput.placeholder = ' . json_encode($dadoEnviado) .';';
+
+    echo '</script>';
+
+$texto = $_POST['texto'];
+
+require_once('./DB.class.php');
+
+require_once('./conecta.php');
+
+$database = new \DB\Database($host, $username, $password, $dbname);
+
+$conecta = $database->Conecta_PDO();
+
+$sql = "INSERT INTO recebe (recebe) VALUES(:nome)";
+
+$blindar = $conecta->prepare($sql);
+
+$blindar->bindValue(':nome', $texto);
+
+
+$database->Mostra_Texto($texto);
+
+$database->mostra = 55;
+
+$database->Mostra_Tudo();
+
+if($blindar->execute() === true){
+
+
+    echo '<script>alert("bagulho loco bagulho serio");</script>';
+
+    $blindar = null;
 
 }else{
 
-    echo " falhou bb";
 
+    echo 'bagulho mais serious ainda';
 }
 
 
-
-
-
+}
 
 ?>
 

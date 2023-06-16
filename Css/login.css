@@ -1,0 +1,88 @@
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'brush';
+    src: url('../Fonts/brush.ttf');
+  }
+
+body{
+
+font-family: brush;
+
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+.menu form{
+
+margin-top: 75px;
+display: block;
+
+}
+
+.menu input[type="submit"]{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+  
+.filho {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.3);
+  }
+  
+  .filho input {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: brush, arial;
+    border-radius: 5px;
+
+  }
+
+  .filho form{
+
+    margin-left: 30px;
+
+  }
+
+
+  .imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imagem img {
+    margin-left: 75px;
+    width: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(1.3);
+
+  }
+
+ 
+   

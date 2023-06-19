@@ -34,36 +34,16 @@ $this->dbname = $dbname;
 
 public function Conecta_PDO(){
 
-
 $conn = new \PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
+
+$conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+
 
 
 return $conn;
 
 
 }
-
-
-public function Mostra_Texto($texto){
-
-
-
-echo $this->texto = $texto;
-
-
-
-}
-
-
-public function Mostra_Tudo(){
-
-
-echo $this->mostra;
-
-}
-
-
-
 
 
 

@@ -15,6 +15,7 @@
  <div class="imagem">
       <img src="./imgs/pipoca.png">
     </div>
+    
 <form action="" method="post">
 
 <input type="email" placeholder="digite email" name="email" id="email">

@@ -13,7 +13,7 @@
 
 <div class="filho">
  <div class="imagem">
-      <img src="./imgs/pipoca.png">
+      <img src="./imgs/logotipo.png">
     </div>
     
 <form action="" method="post">

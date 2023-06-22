@@ -22,7 +22,7 @@
 
     .filme-container img {
   border-radius: 20px; 
- border: 1px outset white;
+ border: 1px outset rgb(0, 0, 0);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Adicione uma sombra de borda */
 }
 
@@ -38,13 +38,9 @@
     height: 400px;
     object-fit: cover;
 
-    opacity: 0.9;
 }
 
   
-    .filme img:hover {
-    opacity: 1;
-    }
 
 
     body {
@@ -96,25 +92,37 @@
             margin-right: 10px;
         }
 
+    
         .mendu img{
-
-            width: 80%;
-            content: url(./imgs/pipoca.png);
+            
+            width: 100%;    /*  aqui troca logo tipo   */
+            box-shadow: 1px 1px 1px 1px black;
+            background-color: black;
+            border-radius: 10px;
 
         }
-      
+
+        body {
+            background-position: center top;
+            background-size: cover;
+        }
     }
 
     /* Media query para telas maiores */
+
     @media (min-width: 768px) {
         .menu {
             display: block;
         }
-
-        .mendu img{
-
-        width: 20%;
-}
+    
+        .mendu img,
+        .mendu img {
+            width: 25%;
+            margin-top: 15px;
+            box-shadow: 1px 1px 1px 1px black;
+            background-color: black;
+            border-radius: 10px;
+        }
     }
 
     .menu-responsive {
@@ -176,3 +184,34 @@
     #search-btn:hover {
         background-color: #555;
     }
+
+    .avancar {
+        /* Estilos personalizados para o botão de avançar */
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        float: left; /* Adiciona o botão à esquerda */
+        margin-right: 10px; /* Adiciona margem à direita para separar os botões */
+      }
+      
+      .voltar {
+        /* Estilos personalizados para o botão de voltar */
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        float: left; /* Adiciona o botão à esquerda */
+      }
+      
+      .avancar:hover,
+      .voltar:hover {
+        background-color: #ddd;
+      }
+      

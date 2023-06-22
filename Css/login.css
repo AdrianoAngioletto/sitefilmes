@@ -6,6 +6,16 @@ box-sizing: border-box;
 
 }
 
+@media  screen (600  width) {
+  .imagem{
+
+
+
+
+  }
+
+}
+
 @font-face {
     font-family: 'brush';
     src: url('../Fonts/brush.ttf');

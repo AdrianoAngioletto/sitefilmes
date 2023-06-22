@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="mendu">
-        <img src="./imgs/pipoca.png" />
+    <div  class="mendu">
+        <img src="./imgs/logotipo.png" />
     </div>
 
     <div class="menu-responsive">
@@ -45,8 +45,8 @@
             </a>
         </div>
         <div class="filme suspense">
-            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
-                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
+            <a href="https://streamtape.com/e/9XrYaa8wmQTaMVa/" target="_blank">
+                <img src="https://2.bp.blogspot.com/-noTMaKlgrkw/WtdEM69_iiI/AAAAAAAAhbI/bNetLwkdxj0iLnATuO1wlSlMLmKyc1msgCLcBGAs/s1600/blade%2B1998%2Bmovie.jpg" data-caption="Blade Caçador de Vampiros 1 Dublado" />
             </a>
         </div>
         <div class="filme suspense">
@@ -69,7 +69,7 @@
     <div id="filme-overlay">
         <div id="filme-overlay-content">
             <h3 id="filme-caption"></h3>
-            <iframe id="filme-video" width="800" height="400" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+            <iframe id="filme-video" width="1200" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
 
         </div>
     </div>
@@ -77,16 +77,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="Js/filmeslado.js"> </script>
-    
-<?php
-
-
-
-
-?>
-
-
-
 
 
 </body>

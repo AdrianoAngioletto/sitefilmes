@@ -4,15 +4,24 @@ require_once('./DB.class.php');
 
 $database = new DB\Database($host, $username, $password, $dbname);
 
+
 class Insert{
+
+private $database; 
+
+
+function __construct(\DB\Database $database){
+
+$this->database = $database;
+    
+}
 
 function verifica_email(){
 
-global $database;
 
 $email = $_POST['email'];
 
-$conn = $database->Conecta_PDO();
+$conn = $this->database->Conecta_PDO();
 
 $sql = "SELECT COUNT(*) AS resultado FROM recebe WHERE email = :nome";
 
@@ -38,13 +47,11 @@ if($total > 0){
 
 function Insere(){
 
-global $database;
-
 $usuario = $_POST['usuario'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$conexao = $database->Conecta_PDO();
+$conexao = $this->database->Conecta_PDO();
 
 $sql = "INSERT INTO recebe (usuario, email, senha) VALUES(:nome, :nome2, :nome3)";
 

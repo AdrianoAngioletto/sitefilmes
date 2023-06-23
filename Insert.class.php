@@ -10,6 +10,7 @@ class Insert{
 private $database; 
 
 
+
 function __construct(\DB\Database $database){
 
 $this->database = $database;
@@ -74,6 +75,8 @@ if ($blinda->execute([
 
 
 }
+
+
 
 
 

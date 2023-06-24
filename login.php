@@ -6,19 +6,30 @@
     <title>Document</title>
 <style> 
 
-@media (min-width: 700px) {
-    
-    .menu img{
-
-    max-width: 30%;
-
-    }
-
+ /* versão de celular */
+@media (max-width: 700px) {
+  .logotipo {
+    width: 650px;
+  }
+  .menu form{
+    margin: auto;
+  }
+  .banner02 img{
+    width: 100%; /* Tamanho para celular */
+    max-width: 300px; /* Limite máximo de largura para celular */
+    transform: scale(1.2);
+   
+  }
 }
 
 body {
+  background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  height: 100vh;
   margin: 0;
-  padding: 0;
+  background-color: black;
 }
 
 .menu {
@@ -26,10 +37,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 70vh;
 }
 
 .menu img {
@@ -44,12 +51,12 @@ body {
   background-color: #333333;
   padding: 20px;
   border-radius: 5px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(51, 51, 51, 0.5);
 }
 
 .menu form a {
-
-color: white;
-
+  color: white;
 }
 
 .menu label {
@@ -77,97 +84,81 @@ color: white;
 
 .tody {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightblue; 
+  flex-wrap: wrap; /* Permite que os elementos sejam dispostos em várias linhas */
+  justify-content: flex-start; /* Distribui os elementos igualmente ao longo do container */
+  align-items: center; /* Alinha os elementos no topo do container */
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 250px;
   border-radius: 5px;
 }
 
+/* imagem banner 1 para computadores */
+.banner02 img{
+  width: 60vh;
+
+
+}
+
 .filho {
-  background-color: white;
   padding: 10px;
   margin: 10px;
   max-width: 600px;
 }
 
-a{
-
-text-decoration: none;
-
+a {
+  text-decoration: none;
 }
 
 </style>
-
 </head>
 <body>
 
 <div class="menu">
-
-<figcaption>
+  <figcaption class="logotipo">
     <img src="./imgs/logotipo.png">
-</figcaption>
+  </figcaption>
 
-<form action="" method="post" class="movie-form">
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email">
+  <form action="" method="post" class="movie-form">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
 
-  <label for="senha">Senha</label>
-  <input type="password" name="senha" id="senha">
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" id="senha">
 
-  <input type="submit" name="submit" value="Enviar">
+    <input type="submit" name="submit" value="Enviar">
 
-  <label for="registro"><a href="">Não tem Conta? Registre-se </a></label>
-  /
-</form>
-
-
-
+    <label for="registro"><a href="">Não tem Conta? Registre-se</a></label>
+  </form>
 </div>
 
 <div class="tody">
+  <div class="filho">
+    <figcaption class="banner02">
+      <img src="https://i.ytimg.com/vi/97gXNPUhTKM/mqdefault.jpg">
+    </figcaption>
+  </div>
 
-<div class="filho">
+  <div class="filho2">
+    <figcaption class="banner02">
+      <br>
+      <img src="https://pronatec.pro.br/wp-content/uploads/2021/08/Netcine-Plus-App-Filmes-e-Series-Online-Gratis-Como-assistir-no-Celular-TV-ou-PC.jpg">
+    </figcaption>
+  </div>
 
-<p> Bem vindo ao CIDADE DOS FILMES, assista filmes online de graça! com minimo de protetor de links possiveis! </p>
+  <p> A qualquer hora. Em qualquer lugar. Conteúdos maravilhosos, interessantes e incríveis. </p>
 </div>
-
-<div class="filho">
-
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa consequuntur molestias voluptate ipsam nostrum accusantium velit aut, consectetur, vel explicabo nulla? Animi perferendis commodi ullam facere placeat sapiente quia aliquam. </p>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
 
 <?php 
-
 if(@$_POST['email'] != null){
+  require_once('./DB.class.php');
+  require_once('./conecta.php');
+  require_once('./Insert.class.php');
 
-require_once('./DB.class.php');
-require_once('./conecta.php');
-require_once('./Insert.class.php');
-
-$insert = new Insert($database);
-$insert->verifica_email();
-
-$insert->Insere();
-
+  $insert = new Insert($database);
+  $insert->verifica_email();
+  $insert->Insere();
 }
-
-
-
 ?>
-
 
 </body>
 </html>

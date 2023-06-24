@@ -16,75 +16,85 @@
 
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
+body{
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
+    background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  background-position-x: 50%;
+  height: 100vh;
+  margin: 0;
 }
 
-.menu img {
-  max-width: 60%;
-  margin-bottom: 20px;
+
+
+.menu{
+display: flex;
+flex-direction: column;
+cursor:crosshair;
+justify-content: center;
+
+
+
 }
 
-.menu form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #333333;
-  padding: 20px;
-  border-radius: 5px;
+.menu img{
+
+width: 70%;
+
+
 }
 
-.menu label {
-  width: 100%;
+
+.menu form{
+
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+
+
+}
+
+.menu label{
+
+ width: 150px;
   text-align: center;
   color: white;
-  font-weight: bold;
-  margin-bottom: 10px;
+
 }
 
-.menu input {
-  width: 100%;
-  max-width: 250px;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
+
+.menu input{
+
+width: 100%;
+max-width: 150px;
+margin-bottom: 10px;
+
+
+
 }
 
-.menu input[type="submit"] {
-  background-color: #222;
-  color: white;
-  cursor: pointer;
+
+.tody{
+
+
+display: flex;
+flex-direction: column;
+
 }
 
-.tody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightblue; 
-  padding: 10px;
-  margin-top: 20px;
-  border-radius: 5px;
+
+.filho{
+align-self: center;
+background-color: lightblue; 
+padding: 5px;
+margin: 10px;
+
+
 }
 
-.filho {
-  background-color: white;
-  padding: 10px;
-  margin: 10px;
-  max-width: 600px;
-}
 
 
 </style>

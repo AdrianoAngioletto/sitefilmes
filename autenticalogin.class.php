@@ -42,7 +42,7 @@ public function checa_login(){
         echo '<script> window.location.href="./filmes.php" </script>';
     } else {
         
-        echo '<script> alert("Email e/ou senha inválidos.") </script>';
+        echo '<script> alert("Email e/ou senha inválidos.") </script>' ;
     }
 }
 

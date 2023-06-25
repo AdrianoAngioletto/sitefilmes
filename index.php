@@ -4,113 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style> 
-
- /* versão de celular */
-@media (max-width: 700px) {
-  .logotipo {
-    width: 650px;
-  }
-  .menu form{
-    margin: auto;
-  }
-  .banner02 img{
-    width: 100%; /* Tamanho para celular */
-    max-width: 300px; /* Limite máximo de largura para celular */
-    transform: scale(1.2);
-   
-  }
-}
-
-body {
-  background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 50%;
-  height: 100vh;
-  margin: 0;
-  background-color: darkslategrey;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.menu img {
-  max-width: 60%;
-  margin-bottom: 20px;
-}
-
-.menu form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #333333;
-  padding: 20px;
-  border-radius: 5px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(51, 51, 51, 0.5);
-}
-
-.menu form a {
-  color: white;
-}
-
-.menu label {
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.menu input {
-  width: 100%;
-  max-width: 250px;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
-}
-
-.menu input[type="submit"] {
-  background-color: #222;
-  color: white;
-  cursor: pointer;
-}
-
-.tody {
-  display: flex;
-  flex-wrap: wrap; /* Permite que os elementos sejam dispostos em várias linhas */
-  justify-content: flex-start; /* Distribui os elementos igualmente ao longo do container */
-  align-items: center; /* Alinha os elementos no topo do container */
-  padding: 10px;
-  margin-top: 250px;
-  border-radius: 5px;
-}
-
-/* imagem banner 1 para computadores */
-.banner02 img{
-  width: 60vh;
-  transform: scale(1.0);
-
-}
-
-.filho {
-  padding: 10px;
-  margin: 10px;
-  max-width: 600px;
-}
-
-a {
-  text-decoration: none;
-}
-
-</style>
+    <link rel="stylesheet" href="./Css/index_estilo.css">
+    <script defer src="./Js/formulario_registro.js"></script>
 </head>
+
 <body>
 
 <div class="menu">
@@ -118,7 +15,8 @@ a {
     <img src="./imgs/logotipo.png">
   </figcaption>
 
-  <form action="" method="post" class="movie-form">
+  <!-- menu login do formulario -->
+  <form action="" method="post"  id="login-form">
     <label for="email">Email</label>
     <input type="email" name="email" id="email">
 
@@ -127,9 +25,29 @@ a {
 
     <input type="submit" name="submit" value="Enviar">
 
-    <label for="registro"><a href="">Não tem Conta? Registre-se</a></label>
+    <label for="registro"><a href="#" id="register-link">Não tem Conta? Registre-se</a></label>
+  </form>
+
+
+        <!-- Menu registro do formulario -->
+  <form action="" method="post" id="register-form" style="display: none;">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome">
+
+    <label for="email-registro">Email</label>
+    <input type="email" name="email-registro" id="email-registro">
+
+    <label for="senha-registro">Senha</label>
+    <input type="password" name="senha-registro" id="senha-registro">
+
+    <input type="submit" name="submit-registro" value="Registrar">
+
+    <label for="login"><a href="#" id="login-link">Já tem uma conta? Faça login</a></label>
   </form>
 </div>
+
+
+
 
 <div class="tody">
   <div class="filho">

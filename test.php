@@ -153,6 +153,12 @@ margin: 10px;
 
 <?php 
 
+
+echo ' co' .PHP_EOL;
+
+
+
+
 if(@$_POST['email'] != null){
 
 require_once('./DB.class.php');

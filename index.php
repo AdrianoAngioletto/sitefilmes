@@ -1,83 +1,173 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidade dos Filmes</title>
-    
-    <link rel="stylesheet" href="./Css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <title>Document</title>
+<style> 
+
+ /* versão de celular */
+@media (max-width: 700px) {
+  .logotipo {
+    width: 650px;
+  }
+  .menu form{
+    margin: auto;
+  }
+  .banner02 img{
+    width: 100%; /* Tamanho para celular */
+    max-width: 300px; /* Limite máximo de largura para celular */
+    transform: scale(1.2);
+   
+  }
+}
+
+body {
+  background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  height: 100vh;
+  margin: 0;
+  background-color: darkslategrey;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.menu img {
+  max-width: 60%;
+  margin-bottom: 20px;
+}
+
+.menu form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.menu form a {
+  color: white;
+}
+
+.menu label {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.menu input {
+  width: 100%;
+  max-width: 250px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.menu input[type="submit"] {
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.tody {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos sejam dispostos em várias linhas */
+  justify-content: flex-start; /* Distribui os elementos igualmente ao longo do container */
+  align-items: center; /* Alinha os elementos no topo do container */
+  padding: 10px;
+  margin-top: 250px;
+  border-radius: 5px;
+}
+
+/* imagem banner 1 para computadores */
+.banner02 img{
+  width: 60vh;
+  transform: scale(1.0);
+
+}
+
+.filho {
+  padding: 10px;
+  margin: 10px;
+  max-width: 600px;
+}
+
+a {
+  text-decoration: none;
+}
+
+</style>
 </head>
-
 <body>
-    <div  class="mendu">
-        <img src="./imgs/logotipo.png" />
-    </div>
 
-    <div class="menu-responsive">
-        <select id="categoria-select">
-            <option value="todos">Escolha Categorias</option>
-            <option value="terror">Terror</option>
-            <option value="suspense">Suspense</option>
-            <option value="acao">Filmes de Ação</option>
-            <option value="comedia">Filmes de Comédia</option>
-            <option value="animados">Filmes Animados</option>
-            <option value="erotico">Filmes Eróticos</option>
-        </select>
-    </div>
+<div class="menu">
+  <figcaption class="logotipo">
+    <img src="./imgs/logotipo.png">
+  </figcaption>
 
-    <div>
-        <input type="text" id="search-input" placeholder="Digite o título do filme">
-        <button id="search-btn">Pesquisar</button>
-    </div>
+  <form action="" method="post" class="movie-form">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
 
-    <div class="filme-container">
-        <div class="filme terror">
-            <a href="https://streamtape.com/e/kWW9Z7G626uYeL/" target="_blank">
-                <img src="https://s2-gshow.glbimg.com/srEPJBTXJB3_KKThSe0zUSBdlz8=/0x0:1080x1351/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2023/Q/g/IPSDQ1SVKCAFBEjZsj0w/vin-diesel-poster.jpg" data-caption="Um poderoso vírus está a solta. Transmitido em uma gota de sangue e com efeito devastador em alguns segundos, o vírus mantém os infectados em um estado permanente de descontrole assassino. Dentro de 28 dias, o país está tomado e um punhado de sobreviventes inicia esforços para garantir algum futuro à raça humana, mas o que não percebem é que o vírus mortal não é única coisa que os ameaça." />
-            </a>
-        </div>
-        <div class="filme suspense">
-            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
-                <img src="https://ottvsimg.ottvs.com.br/cov/mar.248815/0248815_335.jpg" data-caption="Legenda do Filme 2" />
-            </a>
-        </div>
-        <div class="filme suspense">
-            <a href="https://streamtape.com/e/9XrYaa8wmQTaMVa/" target="_blank">
-                <img src="https://2.bp.blogspot.com/-noTMaKlgrkw/WtdEM69_iiI/AAAAAAAAhbI/bNetLwkdxj0iLnATuO1wlSlMLmKyc1msgCLcBGAs/s1600/blade%2B1998%2Bmovie.jpg" data-caption="Blade Caçador de Vampiros 1 Dublado" />
-            </a>
-        </div>
-        <div class="filme suspense">
-            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
-                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
-            </a>
-        </div>
-        <div class="filme suspense">
-            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
-                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
-            </a>
-        </div>
-        <div class="filme suspense">
-            <a href="https://streamtape.com/e/PZ61rR8qm0fgkD/" target="_blank">
-                <img src="https://filmesonlinevizer.com/content/series/posterPt/342/22333.webp" data-caption="Legenda do Filme 3" />
-            </a>
-        </div>
-    </div>
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" id="senha">
 
-    <div id="filme-overlay">
-        <div id="filme-overlay-content">
-            <h3 id="filme-caption"></h3>
-            <iframe id="filme-video" width="1200" height="600" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+    <input type="submit" name="submit" value="Enviar">
 
-        </div>
-    </div>
+    <label for="registro"><a href="">Não tem Conta? Registre-se</a></label>
+  </form>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="Js/filmeslado.js"> </script>
+<div class="tody">
+  <div class="filho">
+    <figcaption class="banner02">
+      <img src="https://i.ytimg.com/vi/97gXNPUhTKM/mqdefault.jpg">
+    </figcaption>
+  </div>
 
+  <div class="filho2">
+    <figcaption class="banner02">
+      <br>
+      <img src="https://pronatec.pro.br/wp-content/uploads/2021/08/Netcine-Plus-App-Filmes-e-Series-Online-Gratis-Como-assistir-no-Celular-TV-ou-PC.jpg">
+    </figcaption>
+  </div>
+
+</div>
+
+<?php 
+
+
+
+
+if(@$_POST['email'] != null){
+
+  require_once('./DB.class.php');
+  require_once('./conecta.php');
+  require_once('./Insert.class.php');
+  require_once('./autenticalogin.class.php');
+
+  $Autentica = new Autentica($database);
+
+ 
+  $Autentica->checa_login();
+
+
+
+}
+?>
 
 </body>
 </html>

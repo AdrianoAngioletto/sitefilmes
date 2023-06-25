@@ -84,7 +84,4 @@ if ($blinda->execute([
 
 
 
-
-
-
 }

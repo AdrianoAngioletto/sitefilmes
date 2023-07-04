@@ -18,7 +18,7 @@
 
 body{
 
-    background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif);
+  background-image: url(https://media.tenor.com/FUWCY83fGHUAAAAd/takeipica-xurupika.gif); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;

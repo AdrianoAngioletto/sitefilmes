@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CIDADE DOS FILMES ™</title>
     <link rel="stylesheet" href="./Css/index_estilo.css">
     <script defer src="./Js/formulario_registro.js"></script>
 </head>
@@ -47,20 +47,16 @@
 </div>
 
 
-
-
 <div class="tody">
   <div class="filho">
-    <figcaption class="banner02">
-      <img src="https://i.ytimg.com/vi/97gXNPUhTKM/mqdefault.jpg">
-    </figcaption>
+
+ <!-- COLOQUE IMAGENS -->
+ 
   </div>
 
   <div class="filho2">
-    <figcaption class="banner02">
-      <br>
-      <img src="https://pronatec.pro.br/wp-content/uploads/2021/08/Netcine-Plus-App-Filmes-e-Series-Online-Gratis-Como-assistir-no-Celular-TV-ou-PC.jpg">
-    </figcaption>
+
+  <!-- COLOQUE IMAGENS -->
   </div>
 
 </div>
@@ -80,9 +76,7 @@ if(@$_POST['email'] != null){
   $Autentica = new Autentica($database);
 
  
-  $Autentica->checa_login();
-
-
+   $Autentica->checa_login(); 
 
 }
 ?>
